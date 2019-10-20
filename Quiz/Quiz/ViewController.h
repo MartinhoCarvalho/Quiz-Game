@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "Quiz.h"
+#import <Foundation/Foundation.h>
 
 @interface ViewController : UIViewController
 @property (assign) Quiz *quiz;
