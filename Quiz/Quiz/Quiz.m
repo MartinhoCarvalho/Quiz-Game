@@ -39,7 +39,24 @@
       //  NSLog(@"idaValue %@", [[_array objectAtIndex:i] getAnswer]);
     //}
     
+    [self addNumber:1 withNumber:2 andCompletionHandler:^(int result) {
+        // We just log the result, no need to do anything else.
+        NSLog(@"The result is %d", result);
+    }];
+    
+    
+    void (^howValue)(int) = ^(int a){
+         NSLog(@"The result is %d", a);
+    };
+    
+    [self addNumber:1 withNumber:2 andCompletionHandler:howValue];
+  
     return self;
+}
+
+
+-(void)addNumber:(int)number1 withNumber:(int)number2 andCompletionHandler:(void (^)(int result))completionHandler{
+    completionHandler(number1+number2);
 }
 
 @end

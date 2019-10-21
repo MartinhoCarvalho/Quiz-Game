@@ -26,7 +26,8 @@ NS_ASSUME_NONNULL_BEGIN
  Methods (public and private)
  */
 -(id) iniQuestionQuiz:(int) scoreValue :(int) idQuizValue : (NSString *) questionText;
-
+//https://www.appcoda.com/objective-c-blocks-tutorial/
+-(void)addNumber:(int)number1 withNumber:(int)number2 andCompletionHandler:(void (^)(int result))completionHandler;
     
 @end
 
