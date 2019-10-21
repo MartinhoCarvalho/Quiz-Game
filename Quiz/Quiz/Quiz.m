@@ -50,6 +50,20 @@
     };
     
     [self addNumber:1 withNumber:2 andCompletionHandler:howValue];
+    
+    int factor = 5;
+    int (^newResult)(void) = ^(void){
+        return factor * 10;
+    };
+    
+    NSLog(@"%d", newResult());
+    
+    
+     int (^newResultType)(int) = ^(int newValue){
+         return factor * 10 * newValue;
+     };
+     
+     NSLog(@"%d", newResultType(10));
   
     return self;
 }
